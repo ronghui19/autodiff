@@ -70,6 +70,10 @@ class MulOp(Op):
         return new_node
 
     def compute(self, node, input_vals):
+        assert len(input_vals) == 2
+        return input_vals[0] * input_vals[1]
+
+    def gradient(self, node, output_grad):
 
 
 
